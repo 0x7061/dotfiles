@@ -1,0 +1,16 @@
+[user]
+    name = John Snow
+    email = john@housestark.com
+
+[commit]
+    gpgsign = true
+
+[includeIf "gitdir:~/Work/Repositories/gh/"]
+    path = ~/.config/git/gh
+
+[includeIf "gitdir:~/Work/Repositories/ghe/"]
+    path = ~/.config/git/ghe
+
+[includeIf "gitdir:~/Work/Repositories/bitbucket/"]
+    path = ~/.config/git/bitbucket
+    
