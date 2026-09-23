@@ -1,0 +1,56 @@
+{
+  "theme": "dark",
+  "permissions": {
+    "deny": [
+      "Read(~/.ssh/**)",           "Edit(~/.ssh/**)",
+      "Read(~/.gnupg/**)",         "Edit(~/.gnupg/**)",
+      "Read(~/.aws/**)",           "Edit(~/.aws/**)",
+      "Read(~/.azure/**)",         "Edit(~/.azure/**)",
+      "Read(~/.config/gcloud/**)", "Edit(~/.config/gcloud/**)",
+      "Read(~/.kube/**)",          "Edit(~/.kube/**)",
+      "Read(~/.docker/config.json)",
+      "Read(~/.config/gh/hosts.yml)",
+      "Read(~/.git-credentials)",
+      "Read(~/.netrc)",
+      "Read(~/.npmrc)",
+      "Read(~/.pypirc)",
+      "Read(~/.config/firebase/**)",
+      "Read(~/.password-store/**)",
+      "Read(~/.terraform.d/**)",
+      "Read(~/.vault-token)",
+      "Read(~/.zsh_history)",
+      "Read(~/.bash_history)",
+      
+      "Read(~/Library/Keychains/**)",
+
+      "Read(**/.env)",   "Read(**/.env.*)",
+      "Edit(**/.env)",   "Edit(**/.env.*)",
+      "Read(**/secrets/**)",     "Edit(**/secrets/**)",
+      "Read(**/credentials/**)", "Edit(**/credentials/**)",
+      "Read(**/*.pem)", "Read(**/*.key)", "Read(**/*.p12)", "Read(**/*.pfx)",
+      "Read(**/id_rsa*)", "Read(**/id_ed25519*)",
+      "Read(**/*serviceAccount*.json)",
+      "Read(**/*-credentials.json)",
+      "Read(**/*.tfstate)", "Read(**/*.tfvars)",
+
+      "Read(**/*.jks)", "Read(**/*.keystore)", "Read(**/key.properties)",
+      "Read(**/*.p8)", "Read(**/*.mobileprovision)",
+
+      "Edit(~/.zshrc)", "Edit(~/.zprofile)", "Edit(~/.zshenv)",
+      "Edit(~/.bashrc)", "Edit(~/.bash_profile)", "Edit(~/.profile)",
+      
+      "Edit(~/.gitconfig)",
+      "Edit(**/.git/hooks/**)",
+
+      "Edit(~/.claude/settings.json)"
+    ],
+    "ask": [
+      "Edit(**/.claude/settings*.json)",
+      "Edit(**/.mcp.json)"
+    ],
+    "disableBypassPermissionsMode": "disable"
+  },
+  "sandbox": {
+    "enabled": true
+  }
+}
