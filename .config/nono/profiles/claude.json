@@ -26,18 +26,11 @@
     "deny": []
   },
   "filesystem": {
-    "allow": [
-      "/specs/composite-field-decoding"
-    ],
+    "allow": [],
     "read": [
-      "~/.config",
-      "~/.config/anthropic",
-      "~/.config/git"
+      "~/.config/anthropic"
     ],
-    "write": [
-      "~/.local/share/claude/versions",
-      "~/Applications"
-    ],
+    "write": [],
     "allow_file": [],
     "read_file": [],
     "write_file": [],
