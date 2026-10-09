@@ -77,7 +77,7 @@ alias d='docker'
 alias t='tmux attach || tmux new -s Work'
 alias vim=nvim
 alias lzg='lazygit'
-alias sclaude='nono run --profile claude --allow-cwd -- claude'
+alias sclaude='nono run --profile nolabs-ai/claude --allow-cwd -- claude'
 
 command -v mise &>/dev/null && eval "$(mise activate zsh)"
 command -v fzf  &>/dev/null && source <(fzf --zsh)
