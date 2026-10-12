@@ -67,6 +67,9 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias cdr='cd $HOME/Work/Repositories'
+alias cdrgh='cd $HOME/Work/Repositories/gh'
+alias cdrghe='cd $HOME/Work/Repositories/ghe'
+alias cdrbb='cd $HOME/Work/Repositories/bitbucket'
 
 # Tools
 alias g='git'
