@@ -1,114 +1,108 @@
 {
-  "permissions": {
-    "deny": [
-      "Edit(**/.env)",
-      "Edit(**/.env.*)",
-      "Edit(**/.git/hooks/**)",
-      "Edit(**/credentials/**)",
-      "Edit(**/secrets/**)",
-      "Edit(~/.aws/**)",
-      "Edit(~/.azure/**)",
-      "Edit(~/.bash_history)",
-      "Edit(~/.bash_logout)",
-      "Edit(~/.bash_profile)",
-      "Edit(~/.bashrc)",
-      "Edit(~/.claude/.credentials.json)",
-      "Edit(~/.claude/CLAUDE.md)",
-      "Edit(~/.claude/agents/**)",
-      "Edit(~/.claude/commands/**)",
-      "Edit(~/.claude/hooks/**)",
-      "Edit(~/.claude/keybindings.json)",
-      "Edit(~/.claude/plugins/**)",
-      "Edit(~/.claude/settings.json)",
-      "Edit(~/.claude/settings.local.json)",
-      "Edit(~/.claude/skills/**)",
-      "Edit(~/.config/autostart/**)",
-      "Edit(~/.config/environment.d/**)",
-      "Edit(~/.config/firebase/**)",
-      "Edit(~/.config/gcloud/**)",
-      "Edit(~/.config/gh/hosts.yml)",
-      "Edit(~/.config/systemd/user/**)",
-      "Edit(~/.docker/config.json)",
-      "Edit(~/.git-credentials)",
-      "Edit(~/.gitconfig)",
-      "Edit(~/.gnupg/**)",
-      "Edit(~/.inputrc)",
-      "Edit(~/.kube/**)",
-      "Edit(~/.local/share/keyrings/**)",
-      "Edit(~/.netrc)",
-      "Edit(~/.npmrc)",
-      "Edit(~/.password-store/**)",
-      "Edit(~/.profile)",
-      "Edit(~/.pypirc)",
-      "Edit(~/.ssh/**)",
-      "Edit(~/.ssh/config)",
-      "Edit(~/.terraform.d/**)",
-      "Edit(~/.vault-token)",
-      "Edit(~/.zprofile)",
-      "Edit(~/.zsh_history)",
-      "Edit(~/.zshenv)",
-      "Edit(~/.zshrc)",
-      "Read(**/*-credentials.json)",
-      "Read(**/*.jks)",
-      "Read(**/*.key)",
-      "Read(**/*.keystore)",
-      "Read(**/*.mobileprovision)",
-      "Read(**/*.p12)",
-      "Read(**/*.p8)",
-      "Read(**/*.pem)",
-      "Read(**/*.pfx)",
-      "Read(**/*.tfstate)",
-      "Read(**/*.tfvars)",
-      "Read(**/*serviceAccount*.json)",
-      "Read(**/.env)",
-      "Read(**/.env.*)",
-      "Read(**/credentials/**)",
-      "Read(**/id_ed25519*)",
-      "Read(**/id_rsa*)",
-      "Read(**/key.properties)",
-      "Read(**/secrets/**)",
-      "Read(~/.aws/**)",
-      "Read(~/.azure/**)",
-      "Read(~/.bash_history)",
-      "Read(~/.claude/.credentials.json)",
-      "Read(~/.config/BraveSoftware/**)",
-      "Read(~/.config/chromium/**)",
-      "Read(~/.config/firebase/**)",
-      "Read(~/.config/gcloud/**)",
-      "Read(~/.config/gh/hosts.yml)",
-      "Read(~/.config/google-chrome/**)",
-      "Read(~/.docker/config.json)",
-      "Read(~/.git-credentials)",
-      "Read(~/.gnupg/**)",
-      "Read(~/.kube/**)",
-      "Read(~/.local/share/keyrings/**)",
-      "Read(~/.mozilla/**)",
-      "Read(~/.netrc)",
-      "Read(~/.npmrc)",
-      "Read(~/.password-store/**)",
-      "Read(~/.pypirc)",
-      "Read(~/.ssh/**)",
-      "Read(~/.terraform.d/**)",
-      "Read(~/.vault-token)",
-      "Read(~/.zsh_history)",
-      "Read(~/Library/Keychains/**)"
-    ],
-    "ask": [
-      "Edit(**/.claude/settings*.json)",
-      "Edit(**/.envrc)",
-      "Edit(**/.mcp.json)",
-      "Edit(~/.config/hypr/**)",
-      "Edit(~/.config/uwsm/**)",
-      "Edit(~/.local/bin/**)"
-    ],
-    "disableBypassPermissionsMode": "disable"
-  },
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "enableAllProjectMcpServers": false,
   "sandbox": {
     "enabled": true,
-    "allowUnsandboxedCommands": false
+    "autoAllowBashIfSandboxed": true,
+    "failIfUnavailable": true,
+    "allowUnsandboxedCommands": false,
+    "network": {
+      "allowedDomains": [
+        "github.com",
+        "api.github.com",
+        "codeload.github.com",
+        "objects.githubusercontent.com",
+        "registry.npmjs.org",
+        "pypi.org",
+        "files.pythonhosted.org"
+      ]
+    },
+    "credentials": {
+      "envVars": [
+        {
+          "name": "GITHUB_TOKEN",
+          "mode": "deny"
+        },
+        {
+          "name": "GH_TOKEN",
+          "mode": "deny"
+        },
+        {
+          "name": "NPM_TOKEN",
+          "mode": "deny"
+        },
+        {
+          "name": "AWS_ACCESS_KEY_ID",
+          "mode": "deny"
+        },
+        {
+          "name": "AWS_SECRET_ACCESS_KEY",
+          "mode": "deny"
+        },
+        {
+          "name": "AWS_SESSION_TOKEN",
+          "mode": "deny"
+        },
+        {
+          "name": "ANTHROPIC_API_KEY",
+          "mode": "deny"
+        },
+        {
+          "name": "OPENAI_API_KEY",
+          "mode": "deny"
+        }
+      ]
+    }
   },
-  "theme": "dark",
-  "enabledPlugins": {
-    "nono@nolabs-ai": true
+  "permissions": {
+    "disableBypassPermissionsMode": "disable",
+    "deny": [
+      "Read(~/.ssh/**)",
+      "Read(~/.gnupg/**)",
+      "Read(~/.aws/**)",
+      "Read(~/.azure/**)",
+      "Read(~/.config/gcloud/**)",
+      "Read(~/.kube/**)",
+      "Read(~/.docker/config.json)",
+      "Read(~/.npmrc)",
+      "Read(~/.pypirc)",
+      "Read(~/.netrc)",
+      "Read(~/.git-credentials)",
+      "Read(~/.config/gh/**)",
+      "Read(~/Library/Keychains/**)",
+      "Read(**/.env)",
+      "Read(**/.env.*)",
+      "Read(!.env.example)",
+      "Edit(~/.bashrc)",
+      "Edit(~/.bash_profile)",
+      "Edit(~/.zshrc)",
+      "Edit(~/.zprofile)",
+      "Edit(~/.profile)",
+      "Edit(~/.claude/settings.json)",
+      "Bash(sudo *)",
+      "Bash(su *)",
+      "Bash(git push --force *)",
+      "Bash(git push -f *)",
+      "Bash(git push *--force*)"
+    ],
+    "ask": [
+      "Bash(git push *)",
+      "Bash(git reset --hard *)",
+      "Bash(git clean *)",
+      "Bash(rm -rf *)",
+      "Bash(npm publish *)",
+      "Bash(pnpm publish *)",
+      "Bash(docker *)",
+      "WebFetch"
+    ],
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(pnpm run *)",
+      "Bash(git status)",
+      "Bash(git diff *)",
+      "Bash(git log *)",
+      "Bash(git add *)",
+      "Bash(git commit *)"
+    ]
   }
 }
